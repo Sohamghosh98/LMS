@@ -1,0 +1,77 @@
+/* Dark mode CSS */
+
+/* Container styling */
+.container {
+    max-width: 960px;
+}
+
+/* Icon link styling */
+.icon-link>.bi {
+    width: .75em;
+    height: .75em;
+}
+
+/* Custom translucent site header */
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #ccc;
+    /* Lighter gray for dark mode */
+    transition: color .15s ease-in-out;
+}
+
+.site-header a:hover {
+    color: #fff;
+    /* White color on hover */
+    text-decoration: none;
+}
+
+/* Dummy devices (replace with your own or adjust as needed) */
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #444;
+    /* Darker background for devices */
+    border-radius: 21px;
+    transform: rotate(30deg);
+    margin-bottom: 10px;
+}
+
+.product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    /* Light translucent overlay */
+    border-radius: 5px;
+}
+
+.product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #555;
+    /* Slightly lighter dark color */
+}
+
+/* Extra utilities */
+.flex-equal>* {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .flex-md-equal>* {
+        flex: 1;
+    }
+}
